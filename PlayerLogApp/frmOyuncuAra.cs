@@ -48,6 +48,9 @@ namespace PlayerLogApp
                 frm.txtSoyad.Text = oyn.Soyad;
                 frm.txtNo.Text = oyn.Numara;
                 frm.txtBoy.Text = oyn.Boy;
+                frm.cbBolgeler.SelectedValue = oyn.BOLGEID;
+                frm.cbTakimlar.SelectedValue = oyn.TAKIMID;
+                frm.dateTimePicker1.Value = Convert.ToDateTime(oyn.DogumTarihi.ToString());
                 frm.ID = oyn.Oyuncu;
                 frm.btnTemizle.Visible = true;
                 

@@ -290,7 +290,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "frmEkle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "h";
             this.Load += new System.EventHandler(this.frmEkle_Load);
             this.pnlTextBox.ResumeLayout(false);
             this.pnlTextBox.PerformLayout();

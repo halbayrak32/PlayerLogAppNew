@@ -186,4 +186,4 @@ namespace PlayerLogApp
 //takım seç takım güncelle takım ekle yap+
 //Oyuncu aratmak için iki parametre yolla  comboxdan takım seçtir ve daha sonra istenilen oyuncunun numarasını girdirdikden sonra oyuncuyu arat++
 //Date Time doldurmaya bak++
-//Güncelleme yapıldı.
+//Güncelleme yapıldıv2

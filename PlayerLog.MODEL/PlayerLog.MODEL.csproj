@@ -43,9 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bolgeler.cs" />
-    <Compile Include="Oyuncular.cs" />
+    <Compile Include="Oyuncu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Takimlar.cs" />
+    <Compile Include="Takim.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

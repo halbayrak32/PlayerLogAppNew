@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace PlayerLog.MODEL
 {
-    public class Oyuncular
+    public class Oyuncu
     {
          #region Fields
         public int oyuncuId;
@@ -24,7 +24,7 @@ namespace PlayerLog.MODEL
         #endregion
 
         #region Properties
-        public int Oyuncu { get => oyuncuId; set => oyuncuId = value; }
+        public int Oyun { get => oyuncuId; set => oyuncuId = value; }
         public int ID { get; set; }
         public int TAKIMID { get => takımId; set => takımId = value; }
         public int BOLGEID { get => bolgeId; set => bolgeId = value; }

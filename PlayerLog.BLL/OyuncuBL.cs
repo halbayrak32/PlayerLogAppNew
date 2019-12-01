@@ -15,7 +15,7 @@ namespace PlayerLog.BLL
         Helper hlp = new Helper();
 
         
-        public bool OyuncuEkle(Oyuncular oyn)
+        public bool OyuncuEkle(Oyuncu oyn)
         {
            
             SqlParameter[] p = { new SqlParameter("@TAKIMID", oyn.TAKIMID), new SqlParameter("@BOLGEID", oyn.BOLGEID), new SqlParameter("@OVERALL", oyn.Overall), new SqlParameter("@AD", oyn.Ad), new SqlParameter("@SOYAD", oyn.Soyad), new SqlParameter("@NUMARA", oyn.Numara), new SqlParameter("@BOY", oyn.Boy), new SqlParameter("@DOGUMTARIHI", oyn.DogumTarihi) };
@@ -23,29 +23,29 @@ namespace PlayerLog.BLL
            return sonuc > 0;
         }
 
-        public bool OyuncuGuncelle(Oyuncular oyn)
+        public bool OyuncuGuncelle(Oyuncu oyn)
         {
             int sonuc = 0;
-            SqlParameter[] p = { new SqlParameter("@OYUNCUID", oyn.Oyuncu), new SqlParameter("@TAKIMID", oyn.TAKIMID), new SqlParameter("@BOLGEID", oyn.BOLGEID), new SqlParameter("@OVERALL", oyn.Overall), new SqlParameter("@AD", oyn.Ad), new SqlParameter("@SOYAD", oyn.Soyad), new SqlParameter("@NUMARA", oyn.Numara), new SqlParameter("@BOY", oyn.Boy), new SqlParameter("@DOGUMTARIHI", oyn.DogumTarihi) };
+            SqlParameter[] p = { new SqlParameter("@OYUNCUID", oyn.Oyun), new SqlParameter("@TAKIMID", oyn.TAKIMID), new SqlParameter("@BOLGEID", oyn.BOLGEID), new SqlParameter("@OVERALL", oyn.Overall), new SqlParameter("@AD", oyn.Ad), new SqlParameter("@SOYAD", oyn.Soyad), new SqlParameter("@NUMARA", oyn.Numara), new SqlParameter("@BOY", oyn.Boy), new SqlParameter("@DOGUMTARIHI", oyn.DogumTarihi) };
 
             sonuc = hlp.ExecuteNonQuery("UPDATE tbl_oyuncu SET TAKIMID=@TAKIMID,BOLGEID=@BOLGEID,overall=@OVERALL,ad=@AD,soyad=@SOYAD,numara=@NUMARA,Boy=@BOY,DOGUMTARIHI=@DOGUMTARIHI  WHERE ID=@OYUNCUID", p);
 
             return sonuc > 0;
         }
 
-        public Oyuncular OyuncuBul(int numara)
+        public Oyuncu OyuncuBul(int numara, int takımId)
         {
-            Oyuncular oyn = null;
+            Oyuncu oyn = null;
 
-            SqlParameter[] p = { new SqlParameter("@Numara", numara) };
+            SqlParameter[] p = { new SqlParameter("@Numara", numara), new SqlParameter("@TAKIMID", takımId) };
 
-            SqlDataReader dr = hlp.ExecuteReader("SELECT ID,TAKIMID,BOLGEID,OVERALL,AD,SOYAD,NUMARA,BOY,DOGUMTARIHI FROM tbl_oyuncu WHERE Numara=@Numara", p);
+            SqlDataReader dr = hlp.ExecuteReader("SELECT ID,TAKIMID,BOLGEID,OVERALL,AD,SOYAD,NUMARA,BOY,DOGUMTARIHI FROM tbl_oyuncu WHERE Numara=@Numara AND TAKIMID=@TAKIMID",p);
 
             while (dr.Read())
             {
-                oyn = new Oyuncular();
+                oyn = new Oyuncu();
                 
-                oyn.Oyuncu = Convert.ToInt32(dr["ID"]);
+                oyn.Oyun = Convert.ToInt32(dr["ID"]);
                 oyn.TAKIMID = (int)dr["TAKIMID"];
                 oyn.BOLGEID = (int)dr["BOLGEID"];
                 oyn.Overall = (dr["OVERALL"].ToString());
@@ -61,6 +61,15 @@ namespace PlayerLog.BLL
 
             return oyn;
         }
+        public bool OyuncuSil(int ID)
+        {
+            SqlParameter[] p = { new SqlParameter("@OYUNCUID", ID) };
+            return hlp.ExecuteNonQuery("Delete from tbl_oyuncu where ID=@OYUNCUID", p) > 0;
+        }
+
+
+
+
 
 
         public void Dispose()

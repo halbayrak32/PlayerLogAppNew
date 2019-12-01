@@ -49,6 +49,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnTemizle = new System.Windows.Forms.Button();
             this.pnlTextBox = new System.Windows.Forms.Panel();
+            this.btnSil = new System.Windows.Forms.Button();
             this.pnlTextBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -234,22 +235,28 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(29, 377);
+            this.btnSearch.BackColor = System.Drawing.Color.Indigo;
+            this.btnSearch.Font = new System.Drawing.Font("Humnst777 Blk BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSearch.ForeColor = System.Drawing.Color.White;
+            this.btnSearch.Location = new System.Drawing.Point(29, 354);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(75, 23);
             this.btnSearch.TabIndex = 13;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Text = "ARA";
+            this.btnSearch.UseVisualStyleBackColor = false;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnTemizle
             // 
-            this.btnTemizle.Location = new System.Drawing.Point(29, 415);
+            this.btnTemizle.BackColor = System.Drawing.Color.Indigo;
+            this.btnTemizle.Font = new System.Drawing.Font("Humnst777 Blk BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTemizle.ForeColor = System.Drawing.Color.White;
+            this.btnTemizle.Location = new System.Drawing.Point(29, 383);
             this.btnTemizle.Name = "btnTemizle";
             this.btnTemizle.Size = new System.Drawing.Size(75, 23);
             this.btnTemizle.TabIndex = 14;
-            this.btnTemizle.Text = "Temizle";
-            this.btnTemizle.UseVisualStyleBackColor = true;
+            this.btnTemizle.Text = "VAZGEÇ";
+            this.btnTemizle.UseVisualStyleBackColor = false;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // pnlTextBox
@@ -265,12 +272,25 @@
             this.pnlTextBox.Size = new System.Drawing.Size(167, 194);
             this.pnlTextBox.TabIndex = 15;
             // 
+            // btnSil
+            // 
+            this.btnSil.BackColor = System.Drawing.Color.OrangeRed;
+            this.btnSil.Font = new System.Drawing.Font("Cooper Std Black", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSil.Location = new System.Drawing.Point(29, 415);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(75, 23);
+            this.btnSil.TabIndex = 16;
+            this.btnSil.Text = "SİL";
+            this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
+            // 
             // frmEkle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PlayerLogApp.Properties.Resources.PlayerLogImage;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnSil);
             this.Controls.Add(this.pnlTextBox);
             this.Controls.Add(this.btnTemizle);
             this.Controls.Add(this.btnSearch);
@@ -301,8 +321,6 @@
 
         #endregion
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -310,7 +328,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button btnSearch;
         public System.Windows.Forms.TextBox txtNo;
         public System.Windows.Forms.Panel pnlTextBox;
         public System.Windows.Forms.Button btnTemizle;
@@ -321,6 +338,10 @@
         public System.Windows.Forms.TextBox txtSoyad;
         public System.Windows.Forms.TextBox txtBoy;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.Button btnSearch;
+        public System.Windows.Forms.Button btnSave;
+        public System.Windows.Forms.Button btnExit;
+        public System.Windows.Forms.Button btnSil;
     }
 }
 

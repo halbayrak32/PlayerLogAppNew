@@ -19,7 +19,7 @@ namespace PlayerLogApp
 
         //SqlConnection connection = null;
 
-        Oyuncular oyuncular;
+        Oyuncu oyuncu;
         public int ID = 0;
         public frmEkle()
         {
@@ -43,35 +43,6 @@ namespace PlayerLogApp
             cbBolgeler.ValueMember = "ID";
             bb.Dispose();
         }
-
-
-
-
-        //#region Eski
-
-
-        //    SqlConnection connection = new SqlConnection();
-        //    connection.ConnectionString = @"Data Source=.\SQLEXPRESS;Initial Catalog=PlayerLogDB;Integrated Security=SSPI";
-        //    SqlCommand komut = new SqlCommand();
-        //    komut.CommandText = "SELECT *FROM tbl_takimlar,tbl_bolgeler";           
-        //    komut.Connection = connection;
-        //    komut.CommandType = CommandType.Text;
-
-        //    SqlDataReader dr;
-        //    connection.Open();
-        //    dr = komut.ExecuteReader();
-
-        //    while (dr.Read())
-        //    {
-        //        cbTakimlar.Items.Add(dr["TAKIMADI"]);
-        //        cbBolgeler.Items.Add(dr["BOLGE"]);
-
-
-        //    }
-        //    connection.Close();
-
-        //}
-        //#endregion
 
 
 
@@ -100,25 +71,25 @@ namespace PlayerLogApp
 
             OyuncuBL obl = new OyuncuBL();
             try
-            {                           
-                oyuncular = new Oyuncular();
-                oyuncular.Oyuncu = ID;
-                oyuncular.TAKIMID = (int)cbTakimlar.SelectedValue;
-                oyuncular.BOLGEID = (int)cbBolgeler.SelectedValue;
-                oyuncular.Overall = txtOvr.Text.Trim();
-                oyuncular.Ad = txtAd.Text.Trim();
-                oyuncular.Soyad = txtSoyad.Text.Trim();
-                oyuncular.Numara =txtNo.Text.Trim();
-                oyuncular.Boy = txtBoy.Text.Trim();
-                oyuncular.DogumTarihi = (DateTime)dateTimePicker1.Value;
-              
+            {
+                oyuncu = new Oyuncu();
+                oyuncu.Oyun = ID;
+                oyuncu.TAKIMID = (int)cbTakimlar.SelectedValue;
+                oyuncu.BOLGEID = (int)cbBolgeler.SelectedValue;
+                oyuncu.Overall = txtOvr.Text.Trim();
+                oyuncu.Ad = txtAd.Text.Trim();
+                oyuncu.Soyad = txtSoyad.Text.Trim();
+                oyuncu.Numara = txtNo.Text.Trim();
+                oyuncu.Boy = txtBoy.Text.Trim();
+                oyuncu.DogumTarihi = (DateTime)dateTimePicker1.Value;
+
                 if (ID == 0)
                 {
-                    MessageBox.Show(obl.OyuncuEkle(oyuncular) ? "Ekleme Başarılı" : "Ekleme Başarısız");
+                    MessageBox.Show(obl.OyuncuEkle(oyuncu) ? "Ekleme Başarılı" : "Ekleme Başarısız");
                 }
                 else
                 {
-                    MessageBox.Show(obl.OyuncuGuncelle(oyuncular) ? "Güncelleme Başarılı" : "Güncelleme Başarısız");
+                    MessageBox.Show(obl.OyuncuGuncelle(oyuncu) ? "Güncelleme Başarılı" : "Güncelleme Başarısız");
                 }
             }
             //catch (SqlException ex)
@@ -153,7 +124,6 @@ namespace PlayerLogApp
         private void btnSearch_Click(object sender, EventArgs e)
         {
             frmOyuncuAra frmOyuncuAra = new frmOyuncuAra(this);
-           
             frmOyuncuAra.Show();
 
         }
@@ -163,26 +133,57 @@ namespace PlayerLogApp
             Temizle();
         }
 
-        private void Temizle()
+        void Temizle()
         {
             foreach (Control item in this.Controls["pnltextBox"].Controls)
             {
-                
+
                 item.Text = string.Empty;
 
             }
             cbTakimlar.SelectedIndex = 0;
             cbBolgeler.SelectedIndex = 0;
-            
+            ID = 0;
+            btnTemizle.Visible = false;
+            btnSil.Visible = false;
+
+
 
         }
 
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            DialogResult cvp = MessageBox.Show("Silmek İstediğinize Emin misiniz?", "Silme Onayı!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (cvp == DialogResult.No) return;
+
+            OyuncuBL obl = new OyuncuBL();
+            try
+            {
+                if (obl.OyuncuSil(ID))
+                {
+                    MessageBox.Show("Silme İşlemi Başarılı");
+                }
+                else
+                {
+                    MessageBox.Show("Silme İşlemi Hatalı!");
+                }
+                Temizle();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                obl.Dispose();
+            }
+        }
     }
 }
 
 //try catchleri ekle
-//İsimlendirmeleri düzelt(Oyuncular değil oyuncu yap)
-//takım seç takım güncelle takım ekle yap
-//Oyuncu aratmak için iki parametre yolla  comboxdan takım seçtir ve daha sonra istenilen oyuncunun numarasını girdirdikden sonra oyuncuyu arat
-//Date Time doldurmaya bak
+//İsimlendirmeleri düzelt(Oyuncular değil oyuncu yap) ++
+//takım seç takım güncelle takım ekle yap+
+//Oyuncu aratmak için iki parametre yolla  comboxdan takım seçtir ve daha sonra istenilen oyuncunun numarasını girdirdikden sonra oyuncuyu arat++
+//Date Time doldurmaya bak++
 //Güncelleme yapıldı.

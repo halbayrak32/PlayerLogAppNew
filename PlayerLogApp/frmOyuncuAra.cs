@@ -28,18 +28,30 @@ namespace PlayerLogApp
 
         private void frmOyuncuAra_Load(object sender, EventArgs e)
         {
+            TakimBL tb = new TakimBL();
+            cbTakimlar.DataSource = tb.TakimListesi();
+            cbTakimlar.DisplayMember = "TAKIMADI";
+            cbTakimlar.ValueMember = "ID";
+            tb.Dispose();
 
         }
 
         private void btnAra_Click(object sender, EventArgs e)
         {
-            Bul(int.Parse(txtOyuncuNo.Text.Trim()));
+            Bul(int.Parse(txtOyuncuNo.Text.Trim()), (int)cbTakimlar.SelectedValue);
+
+            if (cbTakimlar.SelectedIndex == 0)
+            {
+                MessageBox.Show("Takım Seçiniz");
+                return;
+            }
+
         }
-        private void Bul(int numara)
+        private void Bul(int numara,int takımId)
         {
-            Oyuncular oyn = null;
+            Oyuncu oyn = null;
             OyuncuBL obl = new OyuncuBL();
-            oyn = obl.OyuncuBul(numara);
+            oyn = obl.OyuncuBul(numara,takımId);
             
             if (oyn != null)
             {                
@@ -51,8 +63,10 @@ namespace PlayerLogApp
                 frm.cbBolgeler.SelectedValue = oyn.BOLGEID;
                 frm.cbTakimlar.SelectedValue = oyn.TAKIMID;
                 frm.dateTimePicker1.Value = Convert.ToDateTime(oyn.DogumTarihi.ToString());
-                frm.ID = oyn.Oyuncu;
+                frm.ID = oyn.Oyun;
                 frm.btnTemizle.Visible = true;
+                frm.btnSave.BackgroundImage = global::PlayerLogApp.Properties.Resources.updateicon;
+                frm.btnSil.Visible = true;
                 
             }
             else

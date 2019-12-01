@@ -59,6 +59,18 @@
     <Compile Include="frmOyuncuAra.Designer.cs">
       <DependentUpon>frmOyuncuAra.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTakim.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTakim.Designer.cs">
+      <DependentUpon>frmTakim.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTakimAra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTakimAra.Designer.cs">
+      <DependentUpon>frmTakimAra.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -66,6 +78,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOyuncuAra.resx">
       <DependentUpon>frmOyuncuAra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTakim.resx">
+      <DependentUpon>frmTakim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTakimAra.resx">
+      <DependentUpon>frmTakimAra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -111,6 +129,9 @@
       <Project>{7925A9E1-C251-47A3-AA0A-0DBF37796A2F}</Project>
       <Name>PlayerLog.MODEL</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\updateicon.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

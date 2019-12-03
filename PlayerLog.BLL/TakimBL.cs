@@ -44,7 +44,7 @@ namespace PlayerLog.BLL
                 tkm = new Takim();
 
                 tkm.ID = Convert.ToInt32(dr["ID"]);
-                tkm.TAKIMID = (int)dr["TAKIMID"];            
+                //tkm.TAKIMID = (int)dr["TAKIMID"];            
                 tkm.TAKIMADI = Convert.ToString(dr["TAKIMADI"]);
                 tkm.EYALETADI =Convert.ToString(dr["EYALETADI"]);
               

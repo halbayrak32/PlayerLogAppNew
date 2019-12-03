@@ -39,8 +39,8 @@ namespace PlayerLogApp
                 takim = new Takim();
 
                 takim.TAKIMID = TAKIMID;
-                takim.TAKIMADI = txttakim.Text.Trim();
-                takim.EYALETADI = txteyl.Text.Trim();
+                takim.TAKIMADI = txtTakim.Text.Trim();
+                takim.EYALETADI = txtEyl.Text.Trim();
 
 
 
@@ -91,10 +91,14 @@ namespace PlayerLogApp
                 item.Text = string.Empty;
             }
             TAKIMID = 0;
-            //btnTemizle.Visible = false;
+            btnVazgec.Visible = false;
+            btnEkle.Text = "Ekle";
             btnSil.Visible = false;
         }
-
+        private void btnVazgec_Click(object sender, EventArgs e)
+        {
+            Temizle();
+        }
 
 
         private void btnSil_Click(object sender, EventArgs e)
@@ -125,6 +129,6 @@ namespace PlayerLogApp
             }
         }
 
-
+       
     }
 }

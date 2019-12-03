@@ -30,15 +30,15 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txteyl = new System.Windows.Forms.TextBox();
-            this.txttakim = new System.Windows.Forms.TextBox();
+            this.txtEylAra = new System.Windows.Forms.TextBox();
+            this.txtTakimAra = new System.Windows.Forms.TextBox();
             this.btnAra = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 42);
+            this.label1.Location = new System.Drawing.Point(12, 20);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 13);
             this.label1.TabIndex = 1;
@@ -47,29 +47,29 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 92);
+            this.label2.Location = new System.Drawing.Point(12, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Takım Adı:";
             // 
-            // txteyl
+            // txtEylAra
             // 
-            this.txteyl.Location = new System.Drawing.Point(88, 39);
-            this.txteyl.Name = "txteyl";
-            this.txteyl.Size = new System.Drawing.Size(100, 20);
-            this.txteyl.TabIndex = 3;
+            this.txtEylAra.Location = new System.Drawing.Point(88, 17);
+            this.txtEylAra.Name = "txtEylAra";
+            this.txtEylAra.Size = new System.Drawing.Size(100, 20);
+            this.txtEylAra.TabIndex = 3;
             // 
-            // txttakim
+            // txtTakimAra
             // 
-            this.txttakim.Location = new System.Drawing.Point(88, 85);
-            this.txttakim.Name = "txttakim";
-            this.txttakim.Size = new System.Drawing.Size(100, 20);
-            this.txttakim.TabIndex = 4;
+            this.txtTakimAra.Location = new System.Drawing.Point(88, 62);
+            this.txtTakimAra.Name = "txtTakimAra";
+            this.txtTakimAra.Size = new System.Drawing.Size(100, 20);
+            this.txtTakimAra.TabIndex = 4;
             // 
             // btnAra
             // 
-            this.btnAra.Location = new System.Drawing.Point(103, 146);
+            this.btnAra.Location = new System.Drawing.Point(104, 103);
             this.btnAra.Name = "btnAra";
             this.btnAra.Size = new System.Drawing.Size(75, 23);
             this.btnAra.TabIndex = 5;
@@ -81,10 +81,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 230);
+            this.ClientSize = new System.Drawing.Size(231, 169);
             this.Controls.Add(this.btnAra);
-            this.Controls.Add(this.txttakim);
-            this.Controls.Add(this.txteyl);
+            this.Controls.Add(this.txtTakimAra);
+            this.Controls.Add(this.txtEylAra);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmTakimAra";
@@ -99,8 +99,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.TextBox txteyl;
-        public System.Windows.Forms.TextBox txttakim;
+        public System.Windows.Forms.TextBox txtEylAra;
+        public System.Windows.Forms.TextBox txtTakimAra;
         public System.Windows.Forms.Button btnAra;
     }
 }

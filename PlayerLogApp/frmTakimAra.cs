@@ -14,15 +14,15 @@ namespace PlayerLogApp
 {
     public partial class frmTakimAra : Form
     {
-        frmTakim frm;
+        frmTakim frm1;
         public frmTakimAra()
         {
             InitializeComponent();
         }
-        public frmTakimAra(frmTakim frm)
+        public frmTakimAra(frmTakim frm1)
         {
             InitializeComponent();
-            this.frm = frm;
+            this.frm1 = frm1;
         }
 
         private void frmTakimAra_Load(object sender, EventArgs e)
@@ -33,7 +33,7 @@ namespace PlayerLogApp
 
         private void btnAra_Click(object sender, EventArgs e)
         {
-            Bul((txttakim.Text.Trim()), (txteyl.Text.Trim()));
+            Bul( txtTakimAra.Text.Trim() , txtEylAra.Text.Trim() );
         }
 
         private void Bul(string takımAdi, string eyaletAdi)
@@ -44,10 +44,13 @@ namespace PlayerLogApp
 
             if (tkm != null)
             {
-                //frm.txttakim = tkm.TAKIMADI;
-                //frm.txteyl = tkm.EYALETADI;
-                frm.TAKIMID = tkm.TAKIMID;
-                frm.btnSil.Visible = true;
+                frm1.txtTakim.Text = tkm.TAKIMADI;
+                frm1.txtEyl.Text = tkm.EYALETADI;
+                frm1.TAKIMID = tkm.TAKIMID;
+                frm1.btnVazgec.Visible = true;
+                frm1.btnEkle.Text = "Güncelle";
+                frm1.btnSil.Visible = true;
+                
 
             }
             else

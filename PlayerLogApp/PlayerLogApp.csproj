@@ -173,5 +173,20 @@
   <ItemGroup>
     <None Include="Resources\basketball-player-icon-11.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basketball-team-information-icons_87018.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basketball-png-icon-19.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\753232.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\nba2k14-correct-team-logos-e1427375751434.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\fec630075e9c55bbaea890084dc6d277.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

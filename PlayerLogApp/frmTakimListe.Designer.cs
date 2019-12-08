@@ -35,17 +35,20 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(111, 115);
+            this.dataGridView1.Location = new System.Drawing.Point(208, 114);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(560, 168);
+            this.dataGridView1.Size = new System.Drawing.Size(361, 190);
             this.dataGridView1.TabIndex = 0;
             // 
             // frmTakimListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = global::PlayerLogApp.Properties.Resources.basketball_team_information_icons_87018;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(760, 428);
             this.Controls.Add(this.dataGridView1);
+            this.DoubleBuffered = true;
             this.Name = "frmTakimListe";
             this.Text = "frmTakimListe";
             this.Load += new System.EventHandler(this.frmTakimListe_Load);

@@ -35,15 +35,17 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(76, 114);
+            this.dataGridView1.Location = new System.Drawing.Point(112, 151);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(568, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(591, 172);
             this.dataGridView1.TabIndex = 0;
             // 
             // frmOyuncuListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LavenderBlush;
+            this.BackgroundImage = global::PlayerLogApp.Properties.Resources.indir;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.dataGridView1);
             this.Name = "frmOyuncuListe";

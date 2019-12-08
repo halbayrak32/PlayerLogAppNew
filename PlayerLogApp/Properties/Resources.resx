@@ -124,11 +124,23 @@
   <data name="indir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\indir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="updateicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\updateicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="saveicon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\saveicon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="basketball-png-icon-19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\basketball-png-icon-19.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="basketball-team-information-icons_87018" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\basketball-team-information-icons_87018.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fec630075e9c55bbaea890084dc6d277" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fec630075e9c55bbaea890084dc6d277.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="basketball-player-icon-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\basketball-player-icon-11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="updateicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\updateicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="saveicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\saveicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -136,10 +148,13 @@
   <data name="PlayerLogImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\PlayerLogImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="753232" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\753232.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="exit-icons-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit-icons-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="basketball-player-icon-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\basketball-player-icon-11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="nba2k14-correct-team-logos-e1427375751434" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\nba2k14-correct-team-logos-e1427375751434.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -63,6 +63,16 @@ namespace PlayerLogApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _753232 {
+            get {
+                object obj = ResourceManager.GetObject("753232", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap basketball_player_icon_1 {
             get {
                 object obj = ResourceManager.GetObject("basketball-player-icon-1", resourceCulture);
@@ -83,6 +93,26 @@ namespace PlayerLogApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap basketball_png_icon_19 {
+            get {
+                object obj = ResourceManager.GetObject("basketball-png-icon-19", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap basketball_team_information_icons_87018 {
+            get {
+                object obj = ResourceManager.GetObject("basketball-team-information-icons_87018", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap exit_icons_20 {
             get {
                 object obj = ResourceManager.GetObject("exit-icons-20", resourceCulture);
@@ -93,9 +123,29 @@ namespace PlayerLogApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fec630075e9c55bbaea890084dc6d277 {
+            get {
+                object obj = ResourceManager.GetObject("fec630075e9c55bbaea890084dc6d277", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap indir {
             get {
                 object obj = ResourceManager.GetObject("indir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap nba2k14_correct_team_logos_e1427375751434 {
+            get {
+                object obj = ResourceManager.GetObject("nba2k14-correct-team-logos-e1427375751434", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

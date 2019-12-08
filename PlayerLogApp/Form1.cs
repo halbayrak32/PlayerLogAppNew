@@ -82,6 +82,8 @@ namespace PlayerLogApp
                 oyuncu.Numara = txtNo.Text.Trim();
                 oyuncu.Boy = txtBoy.Text.Trim();
                 oyuncu.DogumTarihi = (DateTime)dateTimePicker1.Value;
+                oyuncu.Resim = txtResim.Text.Trim();
+
 
                 if (ID == 0)
                 {
@@ -116,10 +118,7 @@ namespace PlayerLogApp
             }
         }
 
-        private void cbTakimlar_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -131,6 +130,9 @@ namespace PlayerLogApp
         private void btnTemizle_Click(object sender, EventArgs e)
         {
             Temizle();
+            this.btnSave.BackgroundImage = global::PlayerLogApp.Properties.Resources.saveicon1;
+            pictureBox1.Image = null;
+
         }
 
         void Temizle()
@@ -178,12 +180,13 @@ namespace PlayerLogApp
                 obl.Dispose();
             }
         }
+
+        private void btnResim_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            pictureBox1.ImageLocation = openFileDialog1.FileName;
+            txtResim.Text = openFileDialog1.FileName;
+        }
     }
 }
 
-//try catchleri ekle
-//İsimlendirmeleri düzelt(Oyuncular değil oyuncu yap) ++
-//takım seç takım güncelle takım ekle yap+-
-//Oyuncu aratmak için iki parametre yolla  comboxdan takım seçtir ve daha sonra istenilen oyuncunun numarasını girdirdikden sonra oyuncuyu arat++
-//Date Time doldurmaya bak++
-//Güncelleme yapıldıv2.1

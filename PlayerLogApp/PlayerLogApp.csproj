@@ -53,11 +53,23 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmOyuncuAra.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmOyuncuAra.Designer.cs">
       <DependentUpon>frmOyuncuAra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOyuncuListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOyuncuListe.Designer.cs">
+      <DependentUpon>frmOyuncuListe.cs</DependentUpon>
     </Compile>
     <Compile Include="frmTakim.cs">
       <SubType>Form</SubType>
@@ -71,19 +83,34 @@
     <Compile Include="frmTakimAra.Designer.cs">
       <DependentUpon>frmTakimAra.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmTakimListe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTakimListe.Designer.cs">
+      <DependentUpon>frmTakimListe.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOyuncuAra.resx">
       <DependentUpon>frmOyuncuAra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOyuncuListe.resx">
+      <DependentUpon>frmOyuncuListe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTakim.resx">
       <DependentUpon>frmTakim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTakimAra.resx">
       <DependentUpon>frmTakimAra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTakimListe.resx">
+      <DependentUpon>frmTakimListe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -129,9 +156,22 @@
       <Project>{7925A9E1-C251-47A3-AA0A-0DBF37796A2F}</Project>
       <Name>PlayerLog.MODEL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PlayerLogApp.CustomControls\PlayerLogApp.CustomControls.csproj">
+      <Project>{970A270A-31C9-4307-B309-78523211C49F}</Project>
+      <Name>PlayerLogApp.CustomControls</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\updateicon.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basketball-player-icon-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\indir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\basketball-player-icon-11.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

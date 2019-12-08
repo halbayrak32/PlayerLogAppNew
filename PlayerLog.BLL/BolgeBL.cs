@@ -14,17 +14,17 @@ namespace PlayerLog.BLL
         Helper hlp = new Helper();
 
 
-        public List<Bolgeler> BolgeListesi()
+        public List<Bolge> BolgeListesi()
         {
             SqlDataReader dr = hlp.ExecuteReader("SELECT ID,BOLGE FROM tbl_bolgeler", null);
-            List<Bolgeler> lst = new List<Bolgeler>();
+            List<Bolge> lst = new List<Bolge>();
             while (dr.Read())
             {
-                lst.Add(new Bolgeler { ID = Convert.ToInt32(dr["ID"]), BOLGE = dr["BOLGE"].ToString() });
+                lst.Add(new Bolge { ID = Convert.ToInt32(dr["ID"]), BOLGE = dr["BOLGE"].ToString() });
             }
             dr.Close();
 
-            lst.Insert(0, new Bolgeler { BOLGE = "Seciniz" });
+            lst.Insert(0, new Bolge { BOLGE = "Seciniz" });
             return lst;
         }
 

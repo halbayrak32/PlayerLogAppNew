@@ -2,6 +2,7 @@
 using PlayerLog.MODEL;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace PlayerLog.BLL
         {
 
             SqlParameter[] p = { new SqlParameter("@TAKIMID", tkm.TAKIMID), new SqlParameter("@TAKIMADI", tkm.TAKIMADI), new SqlParameter("@EYALETADI", tkm.EYALETADI) };
-            int sonuc = hlp.ExecuteNonQuery("Insert into tbl_takimlar values (@TAKIMID,@TAKIMADI,@EYALETADI)", p);
+            int sonuc = hlp.ExecuteNonQuery("Insert into tbl_takimlar values (@TAKIMADI,@EYALETADI)", p);
             return sonuc > 0;
         }
 
@@ -26,7 +27,7 @@ namespace PlayerLog.BLL
             int sonuc = 0;
             SqlParameter[] p = { new SqlParameter("@TAKIMID", tkm.TAKIMID), new SqlParameter("@TAKIMADI", tkm.TAKIMADI), new SqlParameter("@EYALETADI", tkm.EYALETADI) };
 
-            sonuc = hlp.ExecuteNonQuery("UPDATE tbl_takimlar SET TAKIMADI=@TAKIMADI,EYALETADI=@EYALETADI,WHERE TAKIMID=@TAKIMID", p);
+            sonuc = hlp.ExecuteNonQuery("UPDATE tbl_takimlar SET TAKIMADI=@TAKIMADI,EYALETADI=@EYALETADI WHERE ID=@TAKIMID", p);
 
             return sonuc > 0;
         }
@@ -58,21 +59,23 @@ namespace PlayerLog.BLL
         public bool TakimSil(int TAKIMID)
         {
             SqlParameter[] p = { new SqlParameter("@TAKIMID", TAKIMID) };
-            return hlp.ExecuteNonQuery("Delete from tbl_takimlar where TAKIMID=@TAKIMID", p) > 0;
+            return hlp.ExecuteNonQuery("Delete from tbl_takimlar where ID=@TAKIMID", p) > 0;
         }
 
-               
+        public DataTable TakimTablosu() => hlp.MyDataTable("Select * from tbl_takimlar");
 
 
 
-                                    
+
+
+
         public List<Takim> TakimListesi()
         {
-            SqlDataReader dr = hlp.ExecuteReader("SELECT ID,TAKIMADI FROM tbl_takimlar", null);
+            SqlDataReader dr = hlp.ExecuteReader("SELECT ID,TAKIMADI,EYALETADI FROM tbl_takimlar", null);
             List<Takim> lst = new List<Takim>();
             while (dr.Read())
             {
-                lst.Add(new Takim { ID = Convert.ToInt32(dr["ID"]), TAKIMADI = dr["TAKIMADI"].ToString() });
+                lst.Add(new Takim { ID = Convert.ToInt32(dr["ID"]), TAKIMADI = dr["TAKIMADI"].ToString(), EYALETADI = dr["EYALETADI"].ToString() });
             }
             dr.Close();
 

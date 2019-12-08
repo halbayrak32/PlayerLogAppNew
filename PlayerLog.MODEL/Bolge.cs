@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlayerLog.MODEL
 {
-    public class Bolgeler
+    public class Bolge
     {
         public int ID { get; set; }
 

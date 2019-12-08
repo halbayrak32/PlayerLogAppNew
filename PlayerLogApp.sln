@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerLog.BLL", "PlayerLog.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerLog.MODEL", "PlayerLog.MODEL\PlayerLog.MODEL.csproj", "{7925A9E1-C251-47A3-AA0A-0DBF37796A2F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PlayerLogApp.CustomControls", "PlayerLogApp.CustomControls\PlayerLogApp.CustomControls.csproj", "{970A270A-31C9-4307-B309-78523211C49F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{7925A9E1-C251-47A3-AA0A-0DBF37796A2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7925A9E1-C251-47A3-AA0A-0DBF37796A2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7925A9E1-C251-47A3-AA0A-0DBF37796A2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{970A270A-31C9-4307-B309-78523211C49F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{970A270A-31C9-4307-B309-78523211C49F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{970A270A-31C9-4307-B309-78523211C49F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{970A270A-31C9-4307-B309-78523211C49F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -63,6 +63,8 @@ namespace PlayerLogApp
                 frm.cbBolgeler.SelectedValue = oyn.BOLGEID;
                 frm.cbTakimlar.SelectedValue = oyn.TAKIMID;
                 frm.dateTimePicker1.Value = Convert.ToDateTime(oyn.DogumTarihi.ToString());
+                frm.txtResim.Text = oyn.Resim;
+                frm.pictureBox1.ImageLocation = oyn.Resim;
                 frm.ID = oyn.Oyun;
                 frm.btnTemizle.Visible = true;
                 frm.btnSave.BackgroundImage = global::PlayerLogApp.Properties.Resources.updateicon;

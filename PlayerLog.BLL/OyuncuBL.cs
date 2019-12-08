@@ -3,6 +3,7 @@ using PlayerLog.MODEL;
 //using PlayerLogApp;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -18,17 +19,17 @@ namespace PlayerLog.BLL
         public bool OyuncuEkle(Oyuncu oyn)
         {
            
-            SqlParameter[] p = { new SqlParameter("@TAKIMID", oyn.TAKIMID), new SqlParameter("@BOLGEID", oyn.BOLGEID), new SqlParameter("@OVERALL", oyn.Overall), new SqlParameter("@AD", oyn.Ad), new SqlParameter("@SOYAD", oyn.Soyad), new SqlParameter("@NUMARA", oyn.Numara), new SqlParameter("@BOY", oyn.Boy), new SqlParameter("@DOGUMTARIHI", oyn.DogumTarihi) };
-           int sonuc = hlp.ExecuteNonQuery("Insert into tbl_oyuncu values (@TAKIMID,@BOLGEID,@OVERALL,@AD,@SOYAD,@NUMARA,@BOY,@DOGUMTARIHI)", p);
+            SqlParameter[] p = { new SqlParameter("@TAKIMID", oyn.TAKIMID), new SqlParameter("@BOLGEID", oyn.BOLGEID), new SqlParameter("@OVERALL", oyn.Overall), new SqlParameter("@AD", oyn.Ad), new SqlParameter("@SOYAD", oyn.Soyad), new SqlParameter("@NUMARA", oyn.Numara), new SqlParameter("@BOY", oyn.Boy), new SqlParameter("@DOGUMTARIHI", oyn.DogumTarihi), new SqlParameter("@RESIM", oyn.Resim) };
+           int sonuc = hlp.ExecuteNonQuery("Insert into tbl_oyuncu values (@TAKIMID,@BOLGEID,@OVERALL,@AD,@SOYAD,@NUMARA,@BOY,@DOGUMTARIHI,@RESIM)", p);
            return sonuc > 0;
         }
 
         public bool OyuncuGuncelle(Oyuncu oyn)
         {
             int sonuc = 0;
-            SqlParameter[] p = { new SqlParameter("@OYUNCUID", oyn.Oyun), new SqlParameter("@TAKIMID", oyn.TAKIMID), new SqlParameter("@BOLGEID", oyn.BOLGEID), new SqlParameter("@OVERALL", oyn.Overall), new SqlParameter("@AD", oyn.Ad), new SqlParameter("@SOYAD", oyn.Soyad), new SqlParameter("@NUMARA", oyn.Numara), new SqlParameter("@BOY", oyn.Boy), new SqlParameter("@DOGUMTARIHI", oyn.DogumTarihi) };
+            SqlParameter[] p = { new SqlParameter("@OYUNCUID", oyn.Oyun), new SqlParameter("@TAKIMID", oyn.TAKIMID), new SqlParameter("@BOLGEID", oyn.BOLGEID), new SqlParameter("@OVERALL", oyn.Overall), new SqlParameter("@AD", oyn.Ad), new SqlParameter("@SOYAD", oyn.Soyad), new SqlParameter("@NUMARA", oyn.Numara), new SqlParameter("@BOY", oyn.Boy), new SqlParameter("@DOGUMTARIHI", oyn.DogumTarihi), new SqlParameter("@RESIM",oyn.Resim) };
 
-            sonuc = hlp.ExecuteNonQuery("UPDATE tbl_oyuncu SET TAKIMID=@TAKIMID,BOLGEID=@BOLGEID,overall=@OVERALL,ad=@AD,soyad=@SOYAD,numara=@NUMARA,Boy=@BOY,DOGUMTARIHI=@DOGUMTARIHI  WHERE ID=@OYUNCUID", p);
+            sonuc = hlp.ExecuteNonQuery("UPDATE tbl_oyuncu SET TAKIMID=@TAKIMID,BOLGEID=@BOLGEID,overall=@OVERALL,ad=@AD,soyad=@SOYAD,numara=@NUMARA,Boy=@BOY,DOGUMTARIHI=@DOGUMTARIHI, RESIM=@RESIM  WHERE ID=@OYUNCUID", p);
 
             return sonuc > 0;
         }
@@ -39,7 +40,7 @@ namespace PlayerLog.BLL
 
             SqlParameter[] p = { new SqlParameter("@Numara", numara), new SqlParameter("@TAKIMID", takımId) };
 
-            SqlDataReader dr = hlp.ExecuteReader("SELECT ID,TAKIMID,BOLGEID,OVERALL,AD,SOYAD,NUMARA,BOY,DOGUMTARIHI FROM tbl_oyuncu WHERE Numara=@Numara AND TAKIMID=@TAKIMID",p);
+            SqlDataReader dr = hlp.ExecuteReader("SELECT ID,TAKIMID,BOLGEID,OVERALL,AD,SOYAD,NUMARA,BOY,DOGUMTARIHI,RESIM FROM tbl_oyuncu WHERE Numara=@Numara AND TAKIMID=@TAKIMID",p);
 
             while (dr.Read())
             {
@@ -54,6 +55,8 @@ namespace PlayerLog.BLL
                 oyn.Numara = (dr["NUMARA"]).ToString();
                 oyn.Boy = (dr["BOY"]).ToString();
                 oyn.DogumTarihi = Convert.ToDateTime(dr["DOGUMTARIHI"]);
+                oyn.Resim = Convert.ToString(dr["RESIM"]);
+                
             }
 
             dr.Close();
@@ -67,10 +70,8 @@ namespace PlayerLog.BLL
             return hlp.ExecuteNonQuery("Delete from tbl_oyuncu where ID=@OYUNCUID", p) > 0;
         }
 
-
-
-
-
+        public DataTable OyuncuTablosu() => hlp.MyDataTable("Select * from tbl_oyuncu");
+                       
 
         public void Dispose()
         {

@@ -46,7 +46,7 @@ namespace PlayerLogApp
             {
                 frm1.txtTakim.Text = tkm.TAKIMADI;
                 frm1.txtEyl.Text = tkm.EYALETADI;
-                frm1.TAKIMID = tkm.TAKIMID;
+                frm1.TAKIMID = tkm.ID;
                 frm1.btnVazgec.Visible = true;
                 frm1.btnEkle.Text = "Güncelle";
                 frm1.btnSil.Visible = true;

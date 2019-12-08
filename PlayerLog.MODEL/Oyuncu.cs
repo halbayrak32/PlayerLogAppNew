@@ -21,6 +21,7 @@ namespace PlayerLog.MODEL
         public string numara;
         public string boy;
         public DateTime dogumTarihiId;
+        public string resim;
         #endregion
 
         #region Properties
@@ -35,8 +36,10 @@ namespace PlayerLog.MODEL
         public string Boy { get => boy; set => boy = value; }
         public DateTime DogumTarihi { get => dogumTarihiId; set => dogumTarihiId = value; }
 
+        public string Resim { get => resim ; set => resim = value; }
+
         #endregion
 
-       
+
     }
 }

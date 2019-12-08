@@ -14,6 +14,7 @@ namespace PlayerLogApp
 {
     public partial class frmTakim : Form
     {
+        frmTakimAra frmTakimAra;
         Takim takim;
         public int TAKIMID = 0;
 
@@ -50,7 +51,7 @@ namespace PlayerLogApp
                 }
                 else
                 {
-                    MessageBox.Show(obl.TakimEkle(takim) ? "Güncelleme Başarılı" : "Güncelleme Başarısız");
+                    MessageBox.Show(obl.TakimGuncelle(takim) ? "Güncelleme Başarılı" : "Güncelleme Başarısız");
                 }
             }
             //catch (SqlException ex)
@@ -79,7 +80,7 @@ namespace PlayerLogApp
 
         private void btnAra_Click(object sender, EventArgs e)
         {
-            frmTakimAra frmTakimAra = new frmTakimAra(this);
+            frmTakimAra = new frmTakimAra(this);
             frmTakimAra.Show();
         }
 
@@ -94,10 +95,15 @@ namespace PlayerLogApp
             btnVazgec.Visible = false;
             btnEkle.Text = "Ekle";
             btnSil.Visible = false;
+            
         }
         private void btnVazgec_Click(object sender, EventArgs e)
         {
             Temizle();
+            frmTakimAra.Visible = false;
+
+
+
         }
 
 
@@ -129,6 +135,6 @@ namespace PlayerLogApp
             }
         }
 
-       
+
     }
 }

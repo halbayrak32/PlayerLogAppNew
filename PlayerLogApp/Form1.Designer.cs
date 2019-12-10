@@ -227,6 +227,7 @@
             this.btnTemizle.TabIndex = 14;
             this.btnTemizle.Text = "VAZGEÇ";
             this.btnTemizle.UseVisualStyleBackColor = false;
+            this.btnTemizle.Visible = false;
             this.btnTemizle.Click += new System.EventHandler(this.btnTemizle_Click);
             // 
             // pnlTextBox
@@ -292,6 +293,7 @@
             this.btnSil.TabIndex = 16;
             this.btnSil.Text = "SİL";
             this.btnSil.UseVisualStyleBackColor = false;
+            this.btnSil.Visible = false;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // label9

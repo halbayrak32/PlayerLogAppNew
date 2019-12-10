@@ -146,6 +146,8 @@ namespace PlayerLogApp
             cbTakimlar.SelectedIndex = 0;
             cbBolgeler.SelectedIndex = 0;
             ID = 0;
+            dateTimePicker1.Text = null;
+            txtResim.Text = null;
             btnTemizle.Visible = false;
             btnSil.Visible = false;
 

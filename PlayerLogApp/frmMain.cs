@@ -23,7 +23,14 @@ namespace PlayerLogApp
             frm.MdiParent = this.MdiParent;
             frm.Show();
         }
-
+        private void menuOyuncuAra_Click(object sender, EventArgs e)
+        {
+            frmOyuncuAra frm = new frmOyuncuAra();
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
+           
+        }                
+        
         private void menuOyuncuListe_Click(object sender, EventArgs e)
         {
             frmOyuncuListe frm = new frmOyuncuListe();
@@ -44,5 +51,7 @@ namespace PlayerLogApp
             frm.MdiParent = this.MdiParent;
             frm.Show();
         }
+
+
     }
 }

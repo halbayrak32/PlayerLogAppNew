@@ -35,6 +35,7 @@
             this.menuTakimIslemleri = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTakimKayit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTakimListe = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuOyuncuAra = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,7 @@
             // 
             this.menuOyuncuIslemleri.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuOyuncuKayit,
+            this.menuOyuncuAra,
             this.menuOyuncuListe});
             this.menuOyuncuIslemleri.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.menuOyuncuIslemleri.Name = "menuOyuncuIslemleri";
@@ -89,16 +91,23 @@
             // menuTakimKayit
             // 
             this.menuTakimKayit.Name = "menuTakimKayit";
-            this.menuTakimKayit.Size = new System.Drawing.Size(158, 22);
+            this.menuTakimKayit.Size = new System.Drawing.Size(180, 22);
             this.menuTakimKayit.Text = "Takım Kayıt";
             this.menuTakimKayit.Click += new System.EventHandler(this.menuTakimKayit_Click);
             // 
             // menuTakimListe
             // 
             this.menuTakimListe.Name = "menuTakimListe";
-            this.menuTakimListe.Size = new System.Drawing.Size(158, 22);
+            this.menuTakimListe.Size = new System.Drawing.Size(180, 22);
             this.menuTakimListe.Text = "Takım Listeleme";
             this.menuTakimListe.Click += new System.EventHandler(this.menuTakimListe_Click);
+            // 
+            // menuOyuncuAra
+            // 
+            this.menuOyuncuAra.Name = "menuOyuncuAra";
+            this.menuOyuncuAra.Size = new System.Drawing.Size(180, 22);
+            this.menuOyuncuAra.Text = "Oyuncu Ara";
+            this.menuOyuncuAra.Click += new System.EventHandler(this.menuOyuncuAra_Click);
             // 
             // frmMain
             // 
@@ -125,5 +134,6 @@
         private System.Windows.Forms.ToolStripMenuItem menuTakimIslemleri;
         private System.Windows.Forms.ToolStripMenuItem menuTakimKayit;
         private System.Windows.Forms.ToolStripMenuItem menuTakimListe;
+        private System.Windows.Forms.ToolStripMenuItem menuOyuncuAra;
     }
 }

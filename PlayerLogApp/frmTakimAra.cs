@@ -50,7 +50,10 @@ namespace PlayerLogApp
                 frm1.btnVazgec.Visible = true;
                 frm1.btnEkle.Text = "Güncelle";
                 frm1.btnSil.Visible = true;
-                
+                frm1.txtResim.Text = tkm.Resim;
+                frm1.pictureBox1.ImageLocation = tkm.Resim;
+                frm1.pictureBox1.Visible = true;
+
 
             }
             else

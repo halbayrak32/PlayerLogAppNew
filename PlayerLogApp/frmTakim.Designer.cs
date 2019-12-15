@@ -34,10 +34,16 @@
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.pnlTextBox = new System.Windows.Forms.Panel();
-            this.btnVazgec = new System.Windows.Forms.Button();
-            this.txtEyl = new PlayerLogApp.CustomControls.MyTextBox();
             this.txtTakim = new PlayerLogApp.CustomControls.MyTextBox();
+            this.txtEyl = new PlayerLogApp.CustomControls.MyTextBox();
+            this.btnVazgec = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtResim = new System.Windows.Forms.TextBox();
+            this.btnResim = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.pnlTextBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -63,7 +69,7 @@
             // btnAra
             // 
             this.btnAra.BackColor = System.Drawing.Color.Crimson;
-            this.btnAra.Location = new System.Drawing.Point(141, 150);
+            this.btnAra.Location = new System.Drawing.Point(141, 185);
             this.btnAra.Name = "btnAra";
             this.btnAra.Size = new System.Drawing.Size(75, 23);
             this.btnAra.TabIndex = 4;
@@ -74,7 +80,7 @@
             // btnEkle
             // 
             this.btnEkle.BackColor = System.Drawing.Color.Crimson;
-            this.btnEkle.Location = new System.Drawing.Point(141, 201);
+            this.btnEkle.Location = new System.Drawing.Point(141, 229);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(75, 23);
             this.btnEkle.TabIndex = 5;
@@ -85,7 +91,7 @@
             // btnSil
             // 
             this.btnSil.BackColor = System.Drawing.Color.Crimson;
-            this.btnSil.Location = new System.Drawing.Point(141, 261);
+            this.btnSil.Location = new System.Drawing.Point(141, 278);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(75, 23);
             this.btnSil.TabIndex = 6;
@@ -104,6 +110,22 @@
             this.pnlTextBox.Size = new System.Drawing.Size(143, 100);
             this.pnlTextBox.TabIndex = 7;
             // 
+            // txtTakim
+            // 
+            this.txtTakim.CalismaModu = PlayerLogApp.CustomControls.WorkMode.Harf;
+            this.txtTakim.Location = new System.Drawing.Point(16, 70);
+            this.txtTakim.Name = "txtTakim";
+            this.txtTakim.Size = new System.Drawing.Size(100, 20);
+            this.txtTakim.TabIndex = 10;
+            // 
+            // txtEyl
+            // 
+            this.txtEyl.CalismaModu = PlayerLogApp.CustomControls.WorkMode.Harf;
+            this.txtEyl.Location = new System.Drawing.Point(16, 12);
+            this.txtEyl.Name = "txtEyl";
+            this.txtEyl.Size = new System.Drawing.Size(100, 20);
+            this.txtEyl.TabIndex = 9;
+            // 
             // btnVazgec
             // 
             this.btnVazgec.BackColor = System.Drawing.Color.Navy;
@@ -117,28 +139,57 @@
             this.btnVazgec.Visible = false;
             this.btnVazgec.Click += new System.EventHandler(this.btnVazgec_Click);
             // 
-            // txtEyl
+            // pictureBox1
             // 
-            this.txtEyl.CalismaModu = PlayerLogApp.CustomControls.WorkMode.Harf;
-            this.txtEyl.Location = new System.Drawing.Point(16, 12);
-            this.txtEyl.Name = "txtEyl";
-            this.txtEyl.Size = new System.Drawing.Size(100, 20);
-            this.txtEyl.TabIndex = 9;
+            this.pictureBox1.Location = new System.Drawing.Point(293, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(110, 100);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 21;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             // 
-            // txtTakim
+            // label3
             // 
-            this.txtTakim.CalismaModu = PlayerLogApp.CustomControls.WorkMode.Harf;
-            this.txtTakim.Location = new System.Drawing.Point(16, 70);
-            this.txtTakim.Name = "txtTakim";
-            this.txtTakim.Size = new System.Drawing.Size(100, 20);
-            this.txtTakim.TabIndex = 10;
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Crimson;
+            this.label3.Location = new System.Drawing.Point(62, 152);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Resim";
+            // 
+            // txtResim
+            // 
+            this.txtResim.Location = new System.Drawing.Point(141, 145);
+            this.txtResim.Name = "txtResim";
+            this.txtResim.Size = new System.Drawing.Size(83, 20);
+            this.txtResim.TabIndex = 23;
+            // 
+            // btnResim
+            // 
+            this.btnResim.Location = new System.Drawing.Point(230, 145);
+            this.btnResim.Name = "btnResim";
+            this.btnResim.Size = new System.Drawing.Size(26, 20);
+            this.btnResim.TabIndex = 24;
+            this.btnResim.Text = "...";
+            this.btnResim.UseVisualStyleBackColor = true;
+            this.btnResim.Click += new System.EventHandler(this.btnResim_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // frmTakim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PlayerLogApp.Properties.Resources.nba2k14_correct_team_logos_e1427375751434;
-            this.ClientSize = new System.Drawing.Size(391, 337);
+            this.ClientSize = new System.Drawing.Size(415, 337);
+            this.Controls.Add(this.btnResim);
+            this.Controls.Add(this.txtResim);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnVazgec);
             this.Controls.Add(this.pnlTextBox);
             this.Controls.Add(this.btnSil);
@@ -151,6 +202,7 @@
             this.Load += new System.EventHandler(this.frmTakim_Load);
             this.pnlTextBox.ResumeLayout(false);
             this.pnlTextBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -167,5 +219,10 @@
         public System.Windows.Forms.Button btnVazgec;
         public CustomControls.MyTextBox txtEyl;
         public CustomControls.MyTextBox txtTakim;
+        public System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label3;
+        public System.Windows.Forms.TextBox txtResim;
+        public System.Windows.Forms.Button btnResim;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

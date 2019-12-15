@@ -124,6 +124,7 @@ namespace PlayerLogApp
         {
             frmOyuncuAra frmOyuncuAra = new frmOyuncuAra(this);
             frmOyuncuAra.Show();
+            
 
         }
 
@@ -131,7 +132,7 @@ namespace PlayerLogApp
         {
             Temizle();
             this.btnSave.BackgroundImage = global::PlayerLogApp.Properties.Resources.saveicon1;
-            pictureBox1.Image = null;
+           
 
         }
 
@@ -150,6 +151,7 @@ namespace PlayerLogApp
             txtResim.Text = null;
             btnTemizle.Visible = false;
             btnSil.Visible = false;
+            pictureBox1.Visible = false;
 
 
 
@@ -188,6 +190,7 @@ namespace PlayerLogApp
             openFileDialog1.ShowDialog();
             pictureBox1.ImageLocation = openFileDialog1.FileName;
             txtResim.Text = openFileDialog1.FileName;
+            pictureBox1.Visible = true;
         }
     }
 }

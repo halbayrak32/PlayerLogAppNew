@@ -45,7 +45,7 @@ namespace PlayerLogApp
                 MessageBox.Show("Takım Seçiniz");
                 return;
             }
-
+            
         }
         private void Bul(int numara,int takımId)
         {
@@ -54,7 +54,8 @@ namespace PlayerLogApp
             oyn = obl.OyuncuBul(numara,takımId);
             
             if (oyn != null)
-            {                
+            {
+                
                 frm.txtOvr.Text = oyn.Overall;
                 frm.txtAd.Text = oyn.Ad;
                 frm.txtSoyad.Text = oyn.Soyad;
@@ -65,7 +66,8 @@ namespace PlayerLogApp
                 frm.dateTimePicker1.Value = Convert.ToDateTime(oyn.DogumTarihi.ToString());
                 frm.txtResim.Text = oyn.Resim;
                 frm.pictureBox1.ImageLocation = oyn.Resim;
-                frm.ID = oyn.Oyun;
+                frm.pictureBox1.Visible = true;
+                frm.ID = oyn.Oyun;                
                 frm.btnTemizle.Visible = true;
                 frm.btnSave.BackgroundImage = global::PlayerLogApp.Properties.Resources.updateicon;
                 frm.btnSil.Visible = true;

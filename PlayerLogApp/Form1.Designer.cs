@@ -206,7 +206,7 @@
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.Color.Indigo;
-            this.btnSearch.Font = new System.Drawing.Font("Humnst777 Blk BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSearch.ForeColor = System.Drawing.Color.White;
             this.btnSearch.Location = new System.Drawing.Point(29, 354);
             this.btnSearch.Name = "btnSearch";
@@ -219,7 +219,7 @@
             // btnTemizle
             // 
             this.btnTemizle.BackColor = System.Drawing.Color.Indigo;
-            this.btnTemizle.Font = new System.Drawing.Font("Humnst777 Blk BT", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnTemizle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnTemizle.ForeColor = System.Drawing.Color.White;
             this.btnTemizle.Location = new System.Drawing.Point(29, 383);
             this.btnTemizle.Name = "btnTemizle";
@@ -286,7 +286,7 @@
             // btnSil
             // 
             this.btnSil.BackColor = System.Drawing.Color.OrangeRed;
-            this.btnSil.Font = new System.Drawing.Font("Cooper Std Black", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSil.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSil.Location = new System.Drawing.Point(29, 415);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(75, 23);
@@ -327,12 +327,13 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(412, 18);
+            this.pictureBox1.Location = new System.Drawing.Point(424, 18);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(140, 148);
+            this.pictureBox1.Size = new System.Drawing.Size(129, 141);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 20;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
             // 
             // openFileDialog1
             // 
@@ -343,7 +344,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::PlayerLogApp.Properties.Resources.PlayerLogImage;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(639, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnResim);
             this.Controls.Add(this.txtResim);

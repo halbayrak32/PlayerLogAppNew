@@ -11,6 +11,7 @@ namespace PlayerLog.MODEL
         private int takımId;
         private string takımAdi;
         private string eyaletAdi;
+        public string resim;
 
 
 
@@ -24,6 +25,8 @@ namespace PlayerLog.MODEL
         public string EYALETADI { get => eyaletAdi; set => eyaletAdi = value; }
 
         public int TAKIMID { get => takımId; set => takımId = value; }
+
+        public string Resim { get => resim; set => resim = value; }
 
     }
 }

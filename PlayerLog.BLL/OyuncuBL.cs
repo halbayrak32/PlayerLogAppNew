@@ -70,7 +70,7 @@ namespace PlayerLog.BLL
             return hlp.ExecuteNonQuery("Delete from tbl_oyuncu where ID=@OYUNCUID", p) > 0;
         }
 
-        public DataTable OyuncuTablosu() => hlp.MyDataTable("Select * from tbl_oyuncu");
+        public DataTable OyuncuTablosu() => hlp.MyDataTable("Select  o.ID,o.AD,O.SOYAD,o.NUMARA,o.BOY,o.OVERALL,o.DOGUMTARIHI,o.TAKIMID,o.BOLGEID,o.RESIM,t.TAKIMADI,b.BOLGE from tbl_oyuncu o Inner Join tbl_takimlar t On o.TAKIMID=t.ID Inner Join tbl_bolgeler b On o.BOLGEID= b.ID");
                        
 
         public void Dispose()

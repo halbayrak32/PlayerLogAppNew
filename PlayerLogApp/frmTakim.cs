@@ -42,6 +42,8 @@ namespace PlayerLogApp
                 takim.TAKIMID = TAKIMID;
                 takim.TAKIMADI = txtTakim.Text.Trim();
                 takim.EYALETADI = txtEyl.Text.Trim();
+                takim.Resim = txtResim.Text.Trim();
+
 
 
 
@@ -82,6 +84,7 @@ namespace PlayerLogApp
         {
             frmTakimAra = new frmTakimAra(this);
             frmTakimAra.Show();
+           
         }
 
 
@@ -95,12 +98,14 @@ namespace PlayerLogApp
             btnVazgec.Visible = false;
             btnEkle.Text = "Ekle";
             btnSil.Visible = false;
-            
+            txtResim.Text = null;
+            pictureBox1.Visible = false;
+
         }
         private void btnVazgec_Click(object sender, EventArgs e)
         {
             Temizle();
-            frmTakimAra.Visible = false;
+            //frmTakimAra.Visible = false;
 
 
 
@@ -135,6 +140,13 @@ namespace PlayerLogApp
             }
         }
 
-
+        private void btnResim_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog();
+            pictureBox1.ImageLocation = openFileDialog1.FileName;
+            txtResim.Text = openFileDialog1.FileName;
+            pictureBox1.Visible = true;
+           
+        }
     }
 }

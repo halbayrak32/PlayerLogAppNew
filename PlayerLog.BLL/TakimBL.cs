@@ -17,17 +17,17 @@ namespace PlayerLog.BLL
         public bool TakimEkle(Takim tkm)
         {
 
-            SqlParameter[] p = { new SqlParameter("@TAKIMID", tkm.TAKIMID), new SqlParameter("@TAKIMADI", tkm.TAKIMADI), new SqlParameter("@EYALETADI", tkm.EYALETADI) };
-            int sonuc = hlp.ExecuteNonQuery("Insert into tbl_takimlar values (@TAKIMADI,@EYALETADI)", p);
+            SqlParameter[] p = { new SqlParameter("@TAKIMID", tkm.TAKIMID), new SqlParameter("@TAKIMADI", tkm.TAKIMADI), new SqlParameter("@EYALETADI", tkm.EYALETADI), new SqlParameter("@RESIM", tkm.Resim) };
+            int sonuc = hlp.ExecuteNonQuery("Insert into tbl_takimlar values (@TAKIMADI,@EYALETADI,@RESIM)", p);
             return sonuc > 0;
         }
 
         public bool TakimGuncelle(Takim tkm)
         {
             int sonuc = 0;
-            SqlParameter[] p = { new SqlParameter("@TAKIMID", tkm.TAKIMID), new SqlParameter("@TAKIMADI", tkm.TAKIMADI), new SqlParameter("@EYALETADI", tkm.EYALETADI) };
+            SqlParameter[] p = { new SqlParameter("@TAKIMID", tkm.TAKIMID), new SqlParameter("@TAKIMADI", tkm.TAKIMADI), new SqlParameter("@EYALETADI", tkm.EYALETADI), new SqlParameter("@RESIM", tkm.Resim) };
 
-            sonuc = hlp.ExecuteNonQuery("UPDATE tbl_takimlar SET TAKIMADI=@TAKIMADI,EYALETADI=@EYALETADI WHERE ID=@TAKIMID", p);
+            sonuc = hlp.ExecuteNonQuery("UPDATE tbl_takimlar SET TAKIMADI=@TAKIMADI,EYALETADI=@EYALETADI,RESIM=@RESIM WHERE ID=@TAKIMID", p);
 
             return sonuc > 0;
         }
@@ -38,7 +38,7 @@ namespace PlayerLog.BLL
 
             SqlParameter[] p = {  new SqlParameter("@TAKIMADI", takımAdi) , new SqlParameter("@EYALETADI", eyaletAdi) };
 
-            SqlDataReader dr = hlp.ExecuteReader("SELECT ID,TAKIMADI,EYALETADI FROM tbl_takimlar WHERE TAKIMADI=@TAKIMADI AND EYALETADI=@EYALETADI", p);
+            SqlDataReader dr = hlp.ExecuteReader("SELECT ID,TAKIMADI,EYALETADI,RESIM FROM tbl_takimlar WHERE TAKIMADI=@TAKIMADI AND EYALETADI=@EYALETADI", p);
 
             while (dr.Read())
             {
@@ -48,6 +48,7 @@ namespace PlayerLog.BLL
                 //tkm.TAKIMID = (int)dr["TAKIMID"];            
                 tkm.TAKIMADI = Convert.ToString(dr["TAKIMADI"]);
                 tkm.EYALETADI =Convert.ToString(dr["EYALETADI"]);
+                tkm.Resim = Convert.ToString(dr["RESIM"]);
               
             }
 
@@ -71,11 +72,11 @@ namespace PlayerLog.BLL
 
         public List<Takim> TakimListesi()
         {
-            SqlDataReader dr = hlp.ExecuteReader("SELECT ID,TAKIMADI,EYALETADI FROM tbl_takimlar", null);
+            SqlDataReader dr = hlp.ExecuteReader("SELECT ID,TAKIMADI,EYALETADI,RESIM FROM tbl_takimlar", null);
             List<Takim> lst = new List<Takim>();
             while (dr.Read())
             {
-                lst.Add(new Takim { ID = Convert.ToInt32(dr["ID"]), TAKIMADI = dr["TAKIMADI"].ToString(), EYALETADI = dr["EYALETADI"].ToString() });
+                lst.Add(new Takim { ID = Convert.ToInt32(dr["ID"]), TAKIMADI = dr["TAKIMADI"].ToString(), EYALETADI = dr["EYALETADI"].ToString(), Resim = dr["RESIM"].ToString() });
             }
             dr.Close();
 

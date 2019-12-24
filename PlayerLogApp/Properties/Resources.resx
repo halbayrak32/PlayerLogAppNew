@@ -118,43 +118,70 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="basketball-player-icon-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\basketball-player-icon-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="753232" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\753232.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="indir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\indir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="saveicon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\saveicon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="basketball-png-icon-19" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\basketball-png-icon-19.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="basketball-team-information-icons_87018" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\basketball-team-information-icons_87018.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="basketball-player-icon-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\basketball-player-icon-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fec630075e9c55bbaea890084dc6d277" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fec630075e9c55bbaea890084dc6d277.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="basketball-player-icon-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\basketball-player-icon-11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="updateicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\updateicon.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="saveicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\saveicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="PlayerLogImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\PlayerLogImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="753232" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\753232.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="exit-icons-20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\exit-icons-20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="PlayerLogImage" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\PlayerLogImage.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="saveicon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\saveicon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="saveicon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\saveicon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="nba2k14-correct-team-logos-e1427375751434" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\nba2k14-correct-team-logos-e1427375751434.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="basketball-team-information-icons_87018" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\basketball-team-information-icons_87018.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="basketball-player-icon-11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\basketball-player-icon-11.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="basketball-png-icon-19" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\basketball-png-icon-19.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="53931050_2116861638349300_7094258878807801856_n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\53931050_2116861638349300_7094258878807801856_n.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Cedi" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Cedi.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="cPaul" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cPaul.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Ersan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Ersan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Kemba" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Kemba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Korkmaz" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Korkmaz.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lebron" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lebron.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Melo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Melo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pGeorge" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pGeorge.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -32,7 +32,7 @@
             this.btnKaydet = new System.Windows.Forms.Button();
             this.clmTakimAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmEyaletAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.clmResim = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clmResim = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +46,7 @@
             this.clmResim});
             this.dataGridView1.Location = new System.Drawing.Point(69, 77);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 100;
             this.dataGridView1.Size = new System.Drawing.Size(634, 258);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -73,9 +74,10 @@
             // 
             // clmResim
             // 
-            this.clmResim.DataPropertyName = "RESIM";
             this.clmResim.HeaderText = "Resim";
             this.clmResim.Name = "clmResim";
+            this.clmResim.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.clmResim.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // frmTakimListe
             // 
@@ -101,6 +103,6 @@
         private System.Windows.Forms.Button btnKaydet;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmTakimAdi;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmEyaletAdi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn clmResim;
+        private System.Windows.Forms.DataGridViewImageColumn clmResim;
     }
 }

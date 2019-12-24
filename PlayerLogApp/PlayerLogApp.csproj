@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -12,6 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,9 +36,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -52,6 +64,12 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBolge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBolge.Designer.cs">
+      <DependentUpon>frmBolge.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -89,10 +107,49 @@
     <Compile Include="frmTakimListe.Designer.cs">
       <DependentUpon>frmTakimListe.cs</DependentUpon>
     </Compile>
+    <Compile Include="PlayerLogDBDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlayerLogDBDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerLogDBDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlayerLogDBDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PlayerLogDBDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlayerLogDBDataModel.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="sysdiagram.cs">
+      <DependentUpon>PlayerLogDBDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_bolgeler.cs">
+      <DependentUpon>PlayerLogDBDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_istatistik.cs">
+      <DependentUpon>PlayerLogDBDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_istatistikturu.cs">
+      <DependentUpon>PlayerLogDBDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_main.cs">
+      <DependentUpon>PlayerLogDBDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_oyuncu.cs">
+      <DependentUpon>PlayerLogDBDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tbl_takimlar.cs">
+      <DependentUpon>PlayerLogDBDataModel.tt</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBolge.resx">
+      <DependentUpon>frmBolge.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
@@ -122,6 +179,14 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="packages.config" />
+    <EntityDeploy Include="PlayerLogDBDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PlayerLogDBDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="PlayerLogDBDataModel.edmx.diagram">
+      <DependentUpon>PlayerLogDBDataModel.edmx</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -186,7 +251,37 @@
     <None Include="Resources\nba2k14-correct-team-logos-e1427375751434.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\pGeorge.png" />
+    <None Include="Resources\Melo.png" />
+    <None Include="Resources\lebron.png" />
+    <None Include="Resources\Korkmaz.png" />
+    <None Include="Resources\Kemba.png" />
+    <None Include="Resources\53931050_2116861638349300_7094258878807801856_n.jpg" />
+    <None Include="Resources\Cedi.png" />
+    <None Include="Resources\cPaul.png" />
+    <None Include="Resources\Ersan.png" />
+    <Content Include="PlayerLogDBDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PlayerLogDBDataModel.edmx</DependentUpon>
+      <LastGenOutput>PlayerLogDBDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PlayerLogDBDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PlayerLogDBDataModel.edmx</DependentUpon>
+      <LastGenOutput>PlayerLogDBDataModel.cs</LastGenOutput>
+    </Content>
     <Content Include="Resources\fec630075e9c55bbaea890084dc6d277.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.0\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.0\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.0\build\EntityFramework.targets')" />
 </Project>

@@ -29,6 +29,12 @@ namespace PlayerLogApp
             dt = tb.TakimTablosu();
             dataGridView1.DataSource = dt;
             tb.Dispose();
+
+
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                dataGridView1.Rows[i].Cells["clmResim"].Value = Image.FromFile(dt.Rows[i]["RESIM"].ToString());
+            }
         }
 
         private void btnKaydet_Click(object sender, EventArgs e)

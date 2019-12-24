@@ -18,8 +18,11 @@ namespace PlayerLogApp
         public frmOyuncuListe()
         {
             InitializeComponent();
-            dataGridView1.AutoGenerateColumns = false;
+            dataGridView1.AutoGenerateColumns = false;  
+            
+                       
         }
+        
 
         private void frmOyuncuListe_Load(object sender, EventArgs e)
         {
@@ -27,6 +30,23 @@ namespace PlayerLogApp
             dataGridView1.DataSource = ob.OyuncuTablosu();
             dt = ob.OyuncuTablosu();
             dataGridView1.DataSource = dt;
+           
+          
+
+            for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
+            {
+                dataGridView1.Rows[i].Cells["clmResim"].Value = Image.FromFile(dt.Rows[i]["RESIM"].ToString());
+            }
+
+
+            
+           
+            //string path = "D:/PlayerLogApp_v2/Melo.png";
+            //Image image = Image.FromFile(path);
+            //clmResim.Image = image;
+            //dataGridView1[].Value = Image.FromFile(path);
+            
+
             ob.Dispose();
 
             TakimBL tb = new TakimBL();
@@ -65,7 +85,10 @@ namespace PlayerLogApp
                     oyn.Boy = item["BOY"].ToString();
                     oyn.DogumTarihi = Convert.ToDateTime (item["DOGUMTARIHI"].ToString());
                     oyn.Resim = item["RESIM"].ToString();
-                   
+
+                    
+
+
 
                 }
 
@@ -91,6 +114,12 @@ namespace PlayerLogApp
         private void dataGridView1_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
             e.Cancel = true;
+        }
+
+        private void txtArat_TextChanged(object sender, EventArgs e)
+        {
+         
+            dt.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", "AD", txtArat.Text);
         }
     }
 }

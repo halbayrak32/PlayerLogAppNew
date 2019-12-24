@@ -16,7 +16,7 @@ namespace PlayerLogApp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            Application.Run(new frmBolge());
         }
     }
 }

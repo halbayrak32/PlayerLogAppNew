@@ -25,8 +25,8 @@ namespace PlayerLogApp
         public string BOLGE { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tbl_main> tbl_main { get; set; }
+        public  ICollection<tbl_main> tbl_main { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tbl_oyuncu> tbl_oyuncu { get; set; }
+        public  ICollection<tbl_oyuncu> tbl_oyuncu { get; set; }
     }
 }

@@ -31,11 +31,13 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuOyuncuIslemleri = new System.Windows.Forms.ToolStripMenuItem();
             this.menuOyuncuKayit = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuOyuncuAra = new System.Windows.Forms.ToolStripMenuItem();
             this.menuOyuncuListe = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTakimIslemleri = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTakimKayit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuTakimListe = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuOyuncuAra = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuBolgeIslemleri = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuBolgeKayit = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +47,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(17, 17);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuOyuncuIslemleri,
-            this.menuTakimIslemleri});
+            this.menuTakimIslemleri,
+            this.menuBolgeIslemleri});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.System;
@@ -70,6 +73,13 @@
             this.menuOyuncuKayit.Size = new System.Drawing.Size(180, 22);
             this.menuOyuncuKayit.Text = "Oyuncu Kayıt";
             this.menuOyuncuKayit.Click += new System.EventHandler(this.menuOyuncuKayit_Click);
+            // 
+            // menuOyuncuAra
+            // 
+            this.menuOyuncuAra.Name = "menuOyuncuAra";
+            this.menuOyuncuAra.Size = new System.Drawing.Size(180, 22);
+            this.menuOyuncuAra.Text = "Oyuncu Ara";
+            this.menuOyuncuAra.Click += new System.EventHandler(this.menuOyuncuAra_Click);
             // 
             // menuOyuncuListe
             // 
@@ -102,12 +112,20 @@
             this.menuTakimListe.Text = "Takım Listeleme";
             this.menuTakimListe.Click += new System.EventHandler(this.menuTakimListe_Click);
             // 
-            // menuOyuncuAra
+            // menuBolgeIslemleri
             // 
-            this.menuOyuncuAra.Name = "menuOyuncuAra";
-            this.menuOyuncuAra.Size = new System.Drawing.Size(180, 22);
-            this.menuOyuncuAra.Text = "Oyuncu Ara";
-            this.menuOyuncuAra.Click += new System.EventHandler(this.menuOyuncuAra_Click);
+            this.menuBolgeIslemleri.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuBolgeKayit});
+            this.menuBolgeIslemleri.Name = "menuBolgeIslemleri";
+            this.menuBolgeIslemleri.Size = new System.Drawing.Size(103, 20);
+            this.menuBolgeIslemleri.Text = "Bölge İşlemleri";
+            // 
+            // menuBolgeKayit
+            // 
+            this.menuBolgeKayit.Name = "menuBolgeKayit";
+            this.menuBolgeKayit.Size = new System.Drawing.Size(206, 22);
+            this.menuBolgeKayit.Text = "Bölge Kayıt/Güncelle/Sil";
+            this.menuBolgeKayit.Click += new System.EventHandler(this.menuBolgeKayit_Click);
             // 
             // frmMain
             // 
@@ -135,5 +153,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuTakimKayit;
         private System.Windows.Forms.ToolStripMenuItem menuTakimListe;
         private System.Windows.Forms.ToolStripMenuItem menuOyuncuAra;
+        private System.Windows.Forms.ToolStripMenuItem menuBolgeIslemleri;
+        private System.Windows.Forms.ToolStripMenuItem menuBolgeKayit;
     }
 }

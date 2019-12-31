@@ -52,6 +52,11 @@ namespace PlayerLogApp
             frm.Show();
         }
 
-
+        private void menuBolgeKayit_Click(object sender, EventArgs e)
+        {
+            frmBolge frm = new frmBolge();
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
+        }
     }
 }

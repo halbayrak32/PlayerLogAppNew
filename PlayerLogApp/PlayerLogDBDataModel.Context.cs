@@ -25,12 +25,10 @@ namespace PlayerLogApp
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<tbl_bolgeler> tbl_bolgeler { get; set; }
-        public virtual DbSet<tbl_istatistik> tbl_istatistik { get; set; }
-        public virtual DbSet<tbl_istatistikturu> tbl_istatistikturu { get; set; }
-        public virtual DbSet<tbl_main> tbl_main { get; set; }
-        public virtual DbSet<tbl_oyuncu> tbl_oyuncu { get; set; }
-        public virtual DbSet<tbl_takimlar> tbl_takimlar { get; set; }
+        //public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
+        public  DbSet<tbl_bolgeler> tbl_bolgeler { get; set; }
+        public  DbSet<tbl_main> tbl_main { get; set; }
+        public  DbSet<tbl_oyuncu> tbl_oyuncu { get; set; }
+        public  DbSet<tbl_takimlar> tbl_takimlar { get; set; }
     }
 }

@@ -22,23 +22,6 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="BOLGE" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityType Name="tbl_istatistik">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="OYUNCUID" Type="int" />
-          <Property Name="ISTATISTIKID" Type="int" />
-          <Property Name="MACID" Type="int" />
-          <Property Name="DEGER" Type="int" />
-        </EntityType>
-        <EntityType Name="tbl_istatistikturu">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="ISTATISTIKTURU" Type="nvarchar" MaxLength="50" />
-        </EntityType>
         <EntityType Name="tbl_main">
           <Key>
             <PropertyRef Name="ID" />
@@ -135,8 +118,6 @@
         <EntityContainer Name="PlayerLogDBModelStoreContainer">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_bolgeler" EntityType="Self.tbl_bolgeler" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tbl_istatistik" EntityType="Self.tbl_istatistik" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="tbl_istatistikturu" EntityType="Self.tbl_istatistikturu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_main" EntityType="Self.tbl_main" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_oyuncu" EntityType="Self.tbl_oyuncu" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tbl_takimlar" EntityType="Self.tbl_takimlar" Schema="dbo" store:Type="Tables" />
@@ -184,23 +165,6 @@
           <Property Name="BOLGE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="tbl_main" Relationship="Self.FK_tbl_main_tbl_bolgeler" FromRole="tbl_bolgeler" ToRole="tbl_main" />
           <NavigationProperty Name="tbl_oyuncu" Relationship="Self.FK_tbl_oyuncu_tbl_bolgeler" FromRole="tbl_bolgeler" ToRole="tbl_oyuncu" />
-        </EntityType>
-        <EntityType Name="tbl_istatistik">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="OYUNCUID" Type="Int32" />
-          <Property Name="ISTATISTIKID" Type="Int32" />
-          <Property Name="MACID" Type="Int32" />
-          <Property Name="DEGER" Type="Int32" />
-        </EntityType>
-        <EntityType Name="tbl_istatistikturu">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ISTATISTIKTURU" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="tbl_main">
           <Key>
@@ -306,8 +270,6 @@
         <EntityContainer Name="PlayerLogDBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
           <EntitySet Name="tbl_bolgeler" EntityType="Self.tbl_bolgeler" />
-          <EntitySet Name="tbl_istatistik" EntityType="Self.tbl_istatistik" />
-          <EntitySet Name="tbl_istatistikturu" EntityType="Self.tbl_istatistikturu" />
           <EntitySet Name="tbl_main" EntityType="Self.tbl_main" />
           <EntitySet Name="tbl_oyuncu" EntityType="Self.tbl_oyuncu" />
           <EntitySet Name="tbl_takimlar" EntityType="Self.tbl_takimlar" />
@@ -354,25 +316,6 @@
               <MappingFragment StoreEntitySet="tbl_bolgeler">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="BOLGE" ColumnName="BOLGE" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tbl_istatistik">
-            <EntityTypeMapping TypeName="PlayerLogDBModel.tbl_istatistik">
-              <MappingFragment StoreEntitySet="tbl_istatistik">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="OYUNCUID" ColumnName="OYUNCUID" />
-                <ScalarProperty Name="ISTATISTIKID" ColumnName="ISTATISTIKID" />
-                <ScalarProperty Name="MACID" ColumnName="MACID" />
-                <ScalarProperty Name="DEGER" ColumnName="DEGER" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="tbl_istatistikturu">
-            <EntityTypeMapping TypeName="PlayerLogDBModel.tbl_istatistikturu">
-              <MappingFragment StoreEntitySet="tbl_istatistikturu">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="ISTATISTIKTURU" ColumnName="ISTATISTIKTURU" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -41,6 +41,7 @@
             this.clmBoy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmDogumTarihi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.clmResim = new System.Windows.Forms.DataGridViewImageColumn();
+            this.clmRsmPath = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,17 +58,18 @@
             this.clmNumara,
             this.clmBoy,
             this.clmDogumTarihi,
-            this.clmResim});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 82);
+            this.clmResim,
+            this.clmRsmPath});
+            this.dataGridView1.Location = new System.Drawing.Point(0, 56);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 100;
-            this.dataGridView1.Size = new System.Drawing.Size(862, 208);
+            this.dataGridView1.Size = new System.Drawing.Size(862, 326);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dataGridView1_DataError);
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(310, 296);
+            this.btnKaydet.Location = new System.Drawing.Point(401, 398);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(75, 23);
             this.btnKaydet.TabIndex = 1;
@@ -165,6 +167,13 @@
             this.clmResim.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.clmResim.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
+            // clmRsmPath
+            // 
+            this.clmRsmPath.DataPropertyName = "RESIM";
+            this.clmRsmPath.HeaderText = "ResimPath";
+            this.clmRsmPath.Name = "clmRsmPath";
+            this.clmRsmPath.Visible = false;
+            // 
             // frmOyuncuListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -200,5 +209,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn clmBoy;
         private System.Windows.Forms.DataGridViewTextBoxColumn clmDogumTarihi;
         private System.Windows.Forms.DataGridViewImageColumn clmResim;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clmRsmPath;
     }
 }

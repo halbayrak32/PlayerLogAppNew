@@ -28,6 +28,8 @@ namespace PlayerLogApp
 
         private void frmOyuncuAra_Load(object sender, EventArgs e)
         {
+            
+
             TakimBL tb = new TakimBL();
             cbTakimlar.DataSource = tb.TakimListesi();
             cbTakimlar.DisplayMember = "TAKIMADI";
@@ -77,6 +79,16 @@ namespace PlayerLogApp
             {
                 MessageBox.Show("Oyuncu Bulunamadı");
             }
+        }
+
+        private void btnAnaForm_Click(object sender, EventArgs e)
+        {
+
+            DialogResult cvp = MessageBox.Show("İşlem Yapabilmek İçin Ana Form Açılıyor Emin Misiniz?", "Açılma Onayı!!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (cvp == DialogResult.No) return;
+
+            frmEkle frmEkle = new frmEkle();
+            frmEkle.Show();
         }
     }
 }

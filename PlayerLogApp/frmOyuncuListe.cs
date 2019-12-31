@@ -35,17 +35,11 @@ namespace PlayerLogApp
 
             for (int i = 0; i < dataGridView1.Rows.Count-1; i++)
             {
-                dataGridView1.Rows[i].Cells["clmResim"].Value = Image.FromFile(dt.Rows[i]["RESIM"].ToString());
+                //dataGridView1.Rows[i].Cells["clmResim"].Value = Image.FromFile(dt.Rows[i]["RESIM"].ToString());
+                dataGridView1.Rows[i].Cells["clmResim"].Value = Image.FromFile(dataGridView1.Rows[i].Cells["clmRsmPath"].Value.ToString());
             }
-
-
             
-           
-            //string path = "D:/PlayerLogApp_v2/Melo.png";
-            //Image image = Image.FromFile(path);
-            //clmResim.Image = image;
-            //dataGridView1[].Value = Image.FromFile(path);
-            
+                                             
 
             ob.Dispose();
 
@@ -120,6 +114,13 @@ namespace PlayerLogApp
         {
          
             dt.DefaultView.RowFilter = string.Format("[{0}] LIKE '%{1}%'", "AD", txtArat.Text);
+
+            for (int i = 0; i < dataGridView1.Rows.Count - 1; i++)
+            {
+                //dataGridView1.Rows[i].Cells["clmResim"].Value = Image.FromFile(dt.Rows[i]["RESIM"].ToString());
+                dataGridView1.Rows[i].Cells["clmResim"].Value = Image.FromFile(dataGridView1.Rows[i].Cells["clmRsmPath"].Value.ToString());
+            }
         }
+
     }
 }

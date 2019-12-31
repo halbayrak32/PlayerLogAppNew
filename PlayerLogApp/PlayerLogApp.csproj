@@ -130,12 +130,6 @@
     <Compile Include="tbl_bolgeler.cs">
       <DependentUpon>PlayerLogDBDataModel.tt</DependentUpon>
     </Compile>
-    <Compile Include="tbl_istatistik.cs">
-      <DependentUpon>PlayerLogDBDataModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="tbl_istatistikturu.cs">
-      <DependentUpon>PlayerLogDBDataModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="tbl_main.cs">
       <DependentUpon>PlayerLogDBDataModel.tt</DependentUpon>
     </Compile>
